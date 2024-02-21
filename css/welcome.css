@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bs-bg-color: white;
+}
+body {
+    background-color: var(--bs-bg-color);
+}
+.container-custom {
+    position: relative;
+    padding-top: 3rem;
+    background-color: var(--bs-bg-color);
+}
+.welcome-container {
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica;
+    font-size: 6rem;
+    font-weight: 600;
+}
+.welcome-container a {
+    position: fixed;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: -0.3rem;
+}
+
+.welcome-container p {
+    position: fixed;
+    margin: 0;
+    color: transparent;
+    letter-spacing: -0.3rem;
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+    animation: spotlight 5s infinite;
+    background-image: url(../images/spotlight-rainbow.jpg);
+    background-size: 150%;
+    background-position: center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.intro-text {
+    padding-bottom: 3rem;
+}
+
+@keyframes spotlight {
+    0% {
+        -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+        clip-path: ellipse(100px 100px at 0% 50%);
+    }
+
+    50% {
+        -webkit-clip-path: ellipse(100px 100px at 100% 50%);
+        clip-path: ellipse(100px 100px at 100% 50%);
+    }
+
+    100% {
+        -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+        clip-path: ellipse(100px 100px at 0% 50%);
+    }
+}
+.card:hover {
+    transform: translateY(-1.9rem) scale(1.05);
+    box-shadow: 0 0 3.2rem rgba(0, 0, 0, 0.1);
+}
+.card {
+    transition: 0.4s;
+    cursor: pointer;
+}
+.card-body {
+    min-height: 8rem;
+}
+.card-img-top {
+    object-fit: contain;
+}
+.text-color-inherit {
+    color: inherit;
+}
+footer.container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+}

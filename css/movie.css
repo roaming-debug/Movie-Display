@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif;
+    box-sizing: border-box;
+}
+nav {
+    z-index: 200;
+    /* background-image: linear-gradient(to bottom, rgba(248,249,250,1) 1%, rgba(248,249,250,0.55) 80%, rgba(248,249,250,0.5) 85%, rgba(248,249,250,0) 100%); */
+    background-color: rgba(248, 249, 250, 0.75);
+}
+.navbar-brand {
+    font-size: 1.875rem;
+    padding-left: 2.5rem;
+}
+main {
+    position: relative;
+    top: -4.438rem;
+}
+.poster-container {
+    /* height: 50vh; */
+    margin-bottom: 4rem;
+    padding: 0;
+}
+.poster-container img {
+    height: 85vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.navbar .btn {
+    white-space: nowrap;
+}
+.poster-caption {
+    position: absolute;
+    text-shadow: black 0.1rem 0.1rem 0.2rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; */
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-left: 3rem;
+    bottom: 3rem;
+    transition: 0.3s;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+.poster-caption a,
+.poster-caption h1,
+.poster-caption h2,
+.poster-caption h3,
+.poster-caption h4 {
+    text-decoration: none;
+    color: white;
+}
+.poster-caption:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.today-recommend-topic,
+.movie-name{
+    text-align: center;
+}
+.today-recommend-topic {
+    /* display: inline; */
+    margin-bottom: 3rem;
+}
+.today-recommend-topic::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    left: 10%;
+    background-color: green;
+    height: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+/* .movie-name > *{
+    font-family: 'fangsong', 'Songti SC', 'SimSun', Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif ;
+} */
+.recommend-info {
+    background-color: white;
+    margin: 0;
+    padding: 1rem 0;
+}
+.today-recommend img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+.today-recommend {
+    margin-bottom: 3rem;
+}
+.focus-info h2 {
+    font-weight: 700;
+    /* font-family: 'fangsong', 'Songti SC', 'SimSun', Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif ; */
+}
+.recommend-info .col {
+    /* padding: 0; */
+}
+.focus-info {
+    color: black;
+    align-self: center;
+    /* padding: 4rem 1.25rem; */
+}
+
+.focus-info h6,
+.focus-info p {
+    opacity: .5;
+}
+.focus-info h6 {
+    margin-bottom: 1.25rem;
+}
+.focus-info button {
+    padding: 1rem 3rem;
+}

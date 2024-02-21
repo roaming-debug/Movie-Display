@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际穿越</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i%7cPT+Serif:ital@1%7cBungee+Shade%7cTrade+Winds%7cGrenze+Gotisch%7cSedgwick+Ave%7cFelipa%7cSatisfy%7cCinzel+Decorative:700%7cNoto+Serif+SC:400,700%7cSource+Code+Pro:400,400i,700,700i&amp;display=swap&amp;subset=chinese-simplified"
+        media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css">
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #fafafa;
+        }
+        .intro {
+            /* display: flex; */
+            /* align-items: flex-end; */
+            /* justify-content: flex-start; */
+            color: #fafafa;
+            border-radius: 0.5rem;
+            width: 100vw;
+            height: 100vh;
+        }
+        .intro-text {
+            margin: 0;
+            margin-left: 3rem;
+            margin-bottom: 20vh;
+            z-index: 100;
+            /* background-color: rgba(0, 0, 0, 0.2); */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-shadow: black 0.1rem 0.1rem 0.2rem;
+        }
+        .intro-text p {
+            font-size: 1.6rem;
+            font-family: "PT Serif", serif;
+            font-style: italic;
+        }
+        .intro-text h1 {
+            font-family: Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif;
+        }
+        .intro img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            
+            background-color: #fafafa;
+        }
+        .mt-negative-10 {
+            margin-top: -20vh;
+        }
+        .foreshow-container {
+            margin-top: 3rem;
+        }
+        .foreshow-container iframe{
+            height: 50vw;
+            width: 80vw;
+            margin: 0 auto;
+            margin-top: 3rem;
+            display: block;
+        }
+        .comment-glide {
+            max-width: 50rem;
+            /* padding: 7rem; */
+        }
+        .comment-caption {
+            margin: 7rem;
+        }
+        .comment-caption h4 {
+            min-height: 12.25rem;
+            /* padding: 0 auto; */
+            /* margin: 0 auto; */
+            /* max-width: 50rem; */
+        }
+        .comment-caption span {
+            display: block;
+            text-align: right;
+            font-style: italic;
+            color: #0a0a0a;
+            padding-right: 2rem;
+        }
+        .glide__arrows i {
+            color: #0a0a0a;
+        }
+        .bg-image-fixed {
+            height: 80vh;
+            width: 100vw;
+            background-image: url(images/interstellar-4.png);
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: 100; */
+        }
+        #mute-poetry {
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            margin-right: 3rem;
+            margin-top: 3rem;
+            background-color: transparent;
+            border: unset;
+            color: #fafafa;
+            border: 2px solid #f0f0f0;
+            shape-outside: circle();
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            outline: none;
+        }
+
+        .album-container {
+
+        }
+        #comment-topic {
+            padding-top: 5rem;
+            padding-left: 5rem;
+        }
+        .card-img-top {
+            object-fit: contain;
+        }
+        .card img {
+            /* min-height: ; */
+            max-height: 17rem;
+        }
+        .long-para {
+            max-width: 40vw;
+            /* margin: 0 auto; */
+            margin-right: auto;
+        }
+        .ost-section img {
+            width: 30vw;
+        }
+        .ost-section a {
+            /* margin: 0 auto; */
+            display: block;
+        }
+        .ost-section img {
+            display: block;
+            margin: 0 auto;
+        }
+        .en-quote,
+        .zh-quote {
+            font-family: "PT Serif", serif;
+            font-style: italic;
+            margin-left: 15vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="intro">
+            <button id="mute-poetry">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="intro-text">
+                <h1>星际穿越<br>
+                Interstellar</h3>
+                <p>
+                    不要温顺地走进那个良夜<br>
+                    Do not go gentle into that good night,<br>
+                    Old age should burn and rave at close of day;<br>
+                    Rage, rage against the dying of the light.
+                </p>
+            </div>
+            <img src="images/interstellar-3.png" alt="">
+        </div>
+        <div class="container mt-negative-10" >
+            <h2 id="comment-topic">影评<br>
+                Comments
+            </h2>
+            <div class="container comment-glide glide">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides">
+                        <!-- 轮播图一 -->
+                        <div class="glide__slide">
+                            <div class="comment-caption left">
+                                <h4 class="text-muted">
+                                    我想给100颗星，这可能是我至今看过最令我震撼的电影了。到电影结束时候还不断流泪，奇迹不是因为有上帝，也不是有什么不可知的某种力量，正是我们自己，人类不相信人类的力量把那些我们无可预知的奇迹都认为是上帝的功劳。诺兰把我的世界观如此震撼人心的展现出来，我感觉我现在都激动得语无伦次了
+                                </h4>
+                                <span>豆瓣用户 CSUMMERY</span>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="comment-caption left">
+                                <h4 class="text-muted">
+                                    世界上最遥远的距离，不是天涯海角，也不是生离死别，而是我就站在你书架的背后看着你成长老去，却只能孤独地玩着沙子和摩斯密码，顺便长生不老。
+                                </h4>
+                                <span>豆瓣用户 Fantasy</span>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="comment-caption left">
+                                <h4 class="text-muted">
+                                    THIS IS A MANKIND ACHIEVEMENT.<br><br>
+                                    THE BEST MOVIE EVER MADE.<br><br>
+                                    IS ANYONE HAS DOUBT?
+                                </h4>
+                                <span>IMDB用户 AhmadNeda</span>
+                            </div>
+                        </div>
+                        <div class="glide__slide">
+                            <div class="comment-caption left">
+                                <h4 class="text-muted">
+                                    There is not even a single day I don't think of this movie, 
+                                    it's scenes, it has a profound impact on me and it shall
+                                    remain with me forever.
+                                </h4>
+                                <span>IMDB用户 evolvingh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                            <button class="glide__bullet" data-glide-dir="=3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bg-image-fixed">
+        
+        </div>
+        <div class="container album-container mt-5">
+            <h2>截图<br>
+                Screenshots
+            </h2>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-1.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-2.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-3.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-4.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-9.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-6.jpg" alt="" width="100%"
+                                class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-7.jpg" alt="" width="100%" class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-8.jpg" alt="" width="100%" class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-container">
+                        <div class="card shadow-sm">
+                            <img src="images/interstellar-album-5.jpg" alt="" width="100%" class="bd-placeholder-img card-img-top">
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="container mt-5 ost-section">
+            <h2>电影原声<br>
+                OST
+            </h2>
+            <div class="row">
+                <div class="col">
+                    <p class="mt-4 long-para text-muted">
+                        Hans Zimmer 作曲<br><br>
+                        太史诗太煽情如密云布满了一天然后暴雨骤至的夜，反而没有2001里古典音乐的克制和神往就像是梅雨时节每天都会降至的绵绵细雨，出去打伞与否都不重要，就爱这潮湿。
+                    </p>
+                </div>
+                <div class="col">
+                    <a href="https://music.163.com/#/album?id=3056517" target="_blank">
+                        <img src="images/interstellar-ost-cover.jpg" alt="" class="ost-link">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 quotes-section">
+            <h2>那些触动人心的台词<br>
+                Quotes
+            </h2>
+            <p class="mt-5 en-quote">
+                Cooper: <br>
+                We used to look up at the sky and wonder at our place in the stars.<br>
+                Now we just look down,<br>
+                and worry about our place in the dirt.
+            </p>
+            <p class="zh-quote">
+                我们曾经仰望着浩瀚的星空<br>
+                思考自身的存在<br>
+                现在只能想着<br>
+                怎么在沙尘暴中活下去<br>
+            </p>
+            <p class="mt-5 en-quote">
+                Do not go gentle into that good night<br>
+                Old age should burn and rave at close of day<br>
+                Rage, rage against<br>
+                the dying of the light<br>
+                Though wise men at their end<br>
+                Know dark is right<br>
+                Because their words had forked No lightning they<br>
+                Do not go gentle into that good night<br>
+                Rage, rage against the dying of the light<br>
+            </p>
+            <p class="zh-quote">
+                不要温顺地走进那个良夜<br>
+                激情不能被消沉的暮色淹没<br>
+                咆哮吧<br>
+                痛斥那光的退缩<br>
+                智者在临终的时候<br>
+                对黑暗妥协<br>
+                是因为它们的语言已黯然失色<br>
+                它们也不想被夜色迷惑<br>
+                咆哮吧 咆哮 痛斥那光的退缩<br>
+            </p>
+            
+        </div>
+        <div class="foreshow-container container">
+            <h2>预告片<br>
+                Trailer
+            </h2>
+            <iframe src="//player.bilibili.com/player.html?aid=97705532&bvid=BV1ME411N7G6&cid=166792992&page=1" scrolling="no"
+                border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+        
+        <footer class="border-top mt-5 pt-5 pb-5 container">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md">
+                        <h3>影格</h3>
+                        <small class="d-block text-muted">© 2020-2020</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <div class="row justify-content-end">
+                            <div class="col">
+                                <a href="movie.html" class="text-muted">
+                                    <h6>主页</h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="text-muted">
+                                    <h6>同城</h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="text-muted">
+                                    <h6>小组</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-6 col-md">
+                                <h5>关于</h3>
+                            </div> -->
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="libs/glide/glide.min.js"></script>
+    <script src="script/interstellar.js"></script>
+</body>
+</html>

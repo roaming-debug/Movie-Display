@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎！</title>
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <a data-scroll href="#intro">Welcome to my final project!!</a>
+        <p>Welcome to my final project!!</p>
+    </div>
+    <div class="container-custom container-fluid">
+        <div class="container">
+            <h2 class="intro-text" id="intro">介绍</h2>
+            <div class="album">
+                <div class="row">
+                    <div class="col">
+                        <!--使用 card-container 的原因是为了避免 ScrollReveal
+                        设置的 transform 属性覆盖了原本自己设置的属性-->
+                        <div class="card-container">
+                            <a href="#" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/welcome-preview-2.jpg" alt="" width="100%" height="255" class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>欢迎！</h3>
+                                            <h7>不一样的大作业</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-container">
+                            <a href="./movie.html" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/welcome-preview-1.jpg" alt="" width="100%" height="255"
+                                        class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>影格</h3>
+                                            <h7>做摩登的豆瓣人</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-container">
+                            <a href="./interstellar.html" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/welcome-preview-3.jpg" alt="" width="100%" height="255"
+                                        class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>星际穿越</h3>
+                                            <h7>爱与时空的旅程</h7>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="card-container">
+                            <a href="./movie.html" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/spotlight-rainbow.jpg" alt="" width="100%" height="255"
+                                        class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>假装还有内容</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-container">
+                            <a href="./movie.html" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/spotlight-rainbow.jpg" alt="" width="100%" height="255"
+                                        class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>其实已经没有了</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-container">
+                            <a href="./movie.html" class="text-decoration-none text-color-inherit">
+                                <div class="card shadow-sm">
+                                    <img src="images/spotlight-rainbow.jpg" alt="" width="100%" height="255"
+                                        class="bd-placeholder-img card-img-top">
+                                    <div class="card-body">
+                                        <div class="card-text text-center">
+                                            <h3>但我就是不删</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h2 class="intro-text">为什么影格？</h2>
+            <p>
+                我记得一句出处不详的话：艺术是用来认识自己的方式。<br>
+                电影亦是如此。<br>
+                我爱电影，电影陪伴了我的周末，陪我渡过了无数个良夜。<br>
+                在迷失的日子里，电影提醒了我是谁，我爱着什么。<br>
+                为了纪念电影，我做了影格。<br>
+                为电影干杯！
+            </p>
+        </div>
+        <footer class="container border-top">
+            <div class="text-end text-muted">
+                前端设计大作业 © 2020
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="script/welcome.js"></script>
+</body>
+</html>
