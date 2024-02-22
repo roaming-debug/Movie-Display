@@ -22,7 +22,7 @@
 
 | 栏目构成          | 主要功能        |
 | ----------------- | --------------- |
-| welcome.html      | 欢迎界面        |
+| index.html      | 欢迎界面        |
 | movie.html        | 影格主界面      |
 | interstellar.html | 电影详情界面    |
 | css               | 存放 CSS        |
